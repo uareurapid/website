@@ -124,8 +124,9 @@ ul.mainMenu li a:hover {color: #FF6A00;
 .gray {width: 100%; float: left; clear: both; background: #f6f6f6; margin: 50px 0; padding: 45px 0; position:relative; z-index:1;}
 
 
+.gray_center {width: 100%; clear: both; background: #f6f6f6; margin: 5px 0; padding: 5px 0; position:relative; z-index:1;}
 
-
+.light_green {width: 100%; float: left; clear: both; background: #e4fe83; margin: 50px 0; padding: 45px 0; position:relative; z-index:1;}
 /*
 * Form, input, label, textarea
 */
@@ -294,5 +295,14 @@ h3.no-padding {
 	padding: 0;
 }
 
+.round_bordered {
+	padding: 5px;
+	border: 1px solid #ffffff;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
 
-
+.center {
+	text-align: center;
+}

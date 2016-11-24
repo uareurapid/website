@@ -47,6 +47,10 @@
 	<script type="text/javascript" src="js/validate.js"></script>
 	<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 	<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+	<!--[if lt IE 9]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	<script type="text/javascript" src="js/tagcanvas.min.js"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function() {
 				$("a[rel=example_group]").fancybox({
@@ -57,8 +61,45 @@
 					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
 				}
 			});
+
+			/**if( ! $('#myCanvas').tagcanvas({
+						textColour : '#ffffff',
+						outlineThickness : 1,
+						maxSpeed : 0.03,
+						depth : 0.75
+					})) {
+				// TagCanvas failed to load
+				$('#myCanvasContainer').hide();
+			}*/
+			// your other jQuery stuff here...
 		});
 	</script>
+
+	<!-- initialize the canvas -->
+	<script type="text/javascript">
+		window.onload = function() {
+			try {
+				// use internal link list, so second argument is ''
+				TagCanvas.Start('myCanvas','',{
+					extColour: '#ff0000',
+					outlineColour: 'transparent',
+					reverse: true,
+					depth: 0.5,
+					maxSpeed: 0.05,
+					zoom:0.7,
+					shape: 'sphere'
+					//noMouse: true,
+					//initial:[0.2,0.3]
+				});
+
+			} catch(e) {
+				// something went wrong, hide the canvas container
+				document.getElementById('myCanvasContainer').style.display = 'none';
+			}
+		};
+	</script>
+
+
 
 </head>
 <body>
@@ -69,7 +110,7 @@
 			<div class='container'>
 				<div class='five columns logo'>
 
-					<h3 class="no-padding">We build awsome apps!</h3>
+					<h3 class="no-padding">I build awesome things!</h3>
 				</div>
 
 				<div class='eleven columns'>
@@ -90,7 +131,7 @@
 			<div class='slogan'>
 				<div class='ten columns'>
 					<h1>PC Dreams Software</h1>
-					<h2>You Dream It, We Build It!</h2>
+					<h2>You Dream It, I Build It!</h2>
 					<p>
 					<img src="images/misc/lamp.png" c>
 					</p>
@@ -159,7 +200,7 @@
 			<a href="https://pt.linkedin.com/in/paulocristo">https://pt.linkedin.com/in/paulocristo
 			</a>
 				<br/>my personal Github repo <a href="https://uareurapid.github.com">https://uareurapid.github.com</a>
-				<es portofolio <a href="http://pcdreamsapps.wixsite.com/pcdreamsgames">http://pcdreamsapps.wixsite.com/pcdreamsgames</a>
+				<br/>my games portofolio <a href="http://pcdreamsapps.wixsite.com/pcdreamsgames">http://pcdreamsapps.wixsite.com/pcdreamsgames</a>
 				<br/>or one of my free to download products <a href="http://aemsevents.com">http://aemsevents.com</a>
 			</p>
 			<a href='http://pcdreamsapps.wixsite.com/pcdreamsgames' class='dalej'>Play some of my games</a>
@@ -176,15 +217,15 @@
 		<div class='eight columns'>
 			<h4>Mobile Development</h4>
 			<p>
-				We are experts in developing mobile apps, either native, web of hibrid apps for IOS and Android devices,
-				to suit all our clients requirements. We´re always in search of the most advanced and trendy frameworks and techniques to achieve perfect quality products.
+				I´m an expert in developing mobile apps, either native, web of hibrid apps for IOS and Android devices,
+				to suit all our clients requirements. I´m always in search of the most advanced and trendy frameworks and techniques to achieve perfect quality products.
 			</p>
 		</div>
 
 		<div class='eight columns'>
 			<h4>Web Development</h4>
 			<p>
-				Do you need a new website for your company? Maybe you want to start selling something online? Don´t worry we have the perfect solution for your business.
+				Do you need a new website for your company? Maybe you want to start selling something online? Don´t worry i have the perfect solution for your business.
 			</p>
 		</div>
 
@@ -195,8 +236,8 @@
 		<div class='eight columns'>
 			<h4>Game Development</h4>
 			<p>
-				We are also an Independent Game Development studio. If you´re a publisher and you want to distribute our games get in touch with us.
-				If you want us to develop a game for you drop us a line as well.
+				I also have my own Independent Game Development studio. If you´re a publisher and you want to distribute our games get in touch with us.
+				If you want me to develop a game for you drop me a line as well.
 			</p>
 		</div>
 
@@ -207,16 +248,43 @@
 
 	</div>
 
+	<!--<div class='clear'></div>
+	<div class='clear'></div>
+
+
+	<div class="center"><h3>Some of our clients</h3></div>
+
+	<div class='gray_center'>
+
+		<div class='container'>
+
+			<!-- examples: http://www.goat1000.com/tagcanvas-examples.php -->
+			<!--<div id="myCanvasContainer">
+				<canvas width="800" height="200" id="myCanvas">
+					<p>Anything in here will be replaced on browsers that support the canvas element</p>
+					<ul>
+						<li><a href="http://www.google.com" target="_blank"><img src="images/1.png"/></a></li>
+						<li><a href="http://www.google.com" target="_blank"><img src="images/2.png"/></a></li>
+						<li><a href="http://www.google.com" target="_blank"><img src="images/3.png"/></a></li>
+						<li><a href="http://www.google.com" target="_blank"><img src="images/4.png"/></a></li>
+						<li><a href="http://www.google.com" target="_blank"><img src="images/5.png"/></a></li>
+					</ul>
+				</canvas>
+			</div>
+		</div>
+
+	</div>-->
+
 	<div class='clear'></div>
 	<div class='clear'></div>
 
-	<section class='gray'>
+	<section class='light_green'>
 		<div class='container'>
 			<div class='two-thirds column'>
-				<h3>Something more about our games</h3>
+				<h3>Something more about the games</h3>
 				<p>PC Dreams Software was previously focused on mobile games, but the market is getting extremely crowded and there is no more room for low budget projects, when
 					there are a handful of companies that have taken control of the marketplaces, killing any chance of indie creativity to have success. That´s one of the reasons
-					 why during the year of 2016 we decided to shift our efforts to more heavy platforms and hardcore gamers. We are still focused
+					 why during the year of 2016 we decided to shift the studio´s efforts to more heavy platforms and hardcore gamers. We are still focused
 				in designing entertaining games with a tone of dark humour, but we are not building small games anymore. Eventually we could still release
 				a game or two on the mobile stores, once in a while, but don´t count too much on it.</p>
 			</div>
@@ -239,7 +307,7 @@
 
 	<div class='container'>
 		<div class='sixteen columns form'>
-			<h3 id="contact">Drop us a line and get a fair quote for your next project</h3>
+			<h3 id="contact">Drop me a line and get a fair quote for your next project</h3>
 			<!--<p>Go ahead, write something. Send it, wait untill we response.</p>-->
 			<form action="https://formspree.io/pcdreamssoftware@gmail.com" method="POST">
 				<label>Your name, sir/madam</label>
@@ -310,6 +378,7 @@
 	</script>
 
 
+
 	<script type="text/javascript">
 		var toper = $('a#top');
 
@@ -327,6 +396,7 @@
         	return false;
     	}); 
 	</script>
+
 
 
 </body>

@@ -242,5 +242,9 @@
     }
 
     .container p{
-        text-align: justify;
+        text-align: left;
+    }
+
+    .gray_center .container h3 {
+        text-align: center;
     }
