@@ -361,15 +361,43 @@ h3.no-padding {
 	width: 63px;
 	height: 91px;
 	position: absolute;
-    top: 5rem;
+    top: 6rem;
     z-index: -1;
 	
 }
 
-.linkedin {
-	padding-top: 120px;
-	line-height: 1.3rem;
+.my_cv_mobile {
+	width: 50px;
+	height: 50px;
 }
+
+
+.linkedin {
+	position: absolute;
+	top: 330px;
+	line-height: 1.3rem;
+	margin-bottom: 20px;
+	width: 80%;
+	margin: 0;
+	display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+	.lamp {
+		top: 7.5rem
+	}
+
+	.my_cv {
+		position: absolute;
+		top:10rem;
+		right:2rem;
+	}
+
+	.linkedin {
+		padding-bottom: 3rem;
+	}
+}
+
 
 .inner_slogan {
 	width: 100%;
@@ -383,7 +411,7 @@ h3.no-padding {
 
 .container .one-third.column {
 	border-radius: 8px;
-	background-color: oldlace;
+	background-color: whitesmoke;
 	min-height: 300px;
 	height: 330px;
 }
@@ -398,4 +426,12 @@ strong {
 	font-weight: bold;
 	color:#000;
 	font-size: 16px;
+}
+
+.container .container-second {
+	margin-top: 35rem;
+}
+
+.icon{
+	margin-top: 4px;
 }
