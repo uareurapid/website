@@ -9,14 +9,14 @@
 
 
 body {margin:0; padding: 0; font-family: "Open Sans", Arial, sans-serif;}
-body {background: #fff; color: #585858;}
+body {background: #fff; color: #000;}
 
 
 
 /*
 * Paragraf
 */
-p {font-size: 80%; font-weight: 400; color: #333; line-height: 22px;}
+p {font-size: 80%; font-weight: 400; color: #000; line-height: 22px;}
 
 
 
@@ -343,4 +343,59 @@ h3.no-padding {
 
 .center {
 	text-align: center;
+}
+
+.my_cv {
+	background-image: url('../images/cv.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 90px;
+	height: 90px;
+	float: right;
+	margin-top: 10px;
+}
+.lamp {
+	background-image: url('../images/misc/lamp.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 63px;
+	height: 91px;
+	position: absolute;
+    top: 5rem;
+    z-index: -1;
+	
+}
+
+.linkedin {
+	padding-top: 120px;
+	line-height: 1.3rem;
+}
+
+.inner_slogan {
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.important {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.container .one-third.column {
+	border-radius: 8px;
+	background-color: oldlace;
+	min-height: 300px;
+	height: 330px;
+}
+
+.container p {
+	padding-left: 4px;
+	padding-right: 4px;
+	text-align: justify;
+}
+
+strong {
+	font-weight: bold;
+	color:#000;
+	font-size: 16px;
 }
